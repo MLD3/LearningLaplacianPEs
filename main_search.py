@@ -46,7 +46,7 @@ if __name__ == '__main__':
     parser.add_argument('--pos_method', type=str, default='lap-base')
 
     # dataset and search parameters
-    parser.add_argument('--command', type=str, default='python3 main_train_benchmarks.py')
+    parser.add_argument('--command', type=str, default='python3 main_train.py')
     parser.add_argument('--gpus', type=int, nargs='+', default=[0, 1, 2, 3, 4, 5, 6, 7])
     parser.add_argument('--data_name', type=str, default='Cora')
     parser.add_argument('--exp_name', type=str, default='benchmarks')
