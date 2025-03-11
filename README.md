@@ -6,7 +6,7 @@
    ```bash
    source generate_benchmarks.sh
    ```
-2. Once the datasets are downloaded and preprocessed, use the following command to train models and save results to the `results` directory.
+2. Once the datasets are downloaded and preprocessed, in the `root` directory, use the following command to train models and save results to the `results` directory.
    ```bash
    source search.sh
    ```
