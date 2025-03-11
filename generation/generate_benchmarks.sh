@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# activate correct environment
-# conda activate env --- assumes env has the required packages
-
 python3 main_generate_benchmarks.py --data_name Cora --data_directory ../benchmarks/Cora --save_directory ../benchmarks_proc
 python3 main_generate_benchmarks.py --data_name Cora_ML --data_directory ../benchmarks/Cora_ML --save_directory ../benchmarks_proc
 
