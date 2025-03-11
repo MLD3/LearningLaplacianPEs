@@ -13,8 +13,6 @@ import torch.nn.functional as F
 
 class GraphTransformer_LLPE(nn.Module):
     '''
-    Graph Transformer from Dwivedi et al. 2020
-        - adds positional encodings instead of concatenate as in original AAAI implementation
     '''
     def __init__(self, in_dim, pos_dim=8, h_dim=32, out_dim=1, K=64, num_layers=2, num_heads=4, dropout=0, layer_norm_eps=0):
         super(GraphTransformer_LLPE, self).__init__()
