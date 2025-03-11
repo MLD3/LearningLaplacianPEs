@@ -72,12 +72,12 @@ if __name__ == '__main__':
     print(f'Starting hyperparameter search for model {model_name}-{pos_method} on dataset {data_name}...')
     
     # create save directory
-    save_path = os.path.join('/home/mbito/project_gpe_heterophily/results/', exp_name)
+    save_path = os.path.join('./results/', exp_name)
     if not os.path.exists(save_path): 
         os.mkdir(save_path)
 
     # create model directory
-    model_path = '/data/mbito/models/'
+    model_path = './saved_models/'
     if not os.path.exists(model_path): 
         os.mkdir(model_path)
 
