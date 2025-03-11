@@ -65,7 +65,7 @@ if __name__ == '__main__':
     
     # create model path and data path
     model_path = f'{data_name}_{model_name}_{pos_method}_{model_idx}.pkl'
-    data_path = f'/data/mbito/benchmarks_proc/gpe_heterophily/{data_name}.pkl'
+    data_path = f'./benchmarks_proc/{data_name}.pkl'
 
     # load the data
     device = torch.device(f'cuda:{device_idx}')
@@ -127,8 +127,7 @@ if __name__ == '__main__':
                 stop_counter = 0
                 
                 # save the best model for evaluation
-                # torch.save(model, os.path.join('/data/mbito/models/', model_path))
-                torch.save(model.state_dict(), os.path.join('/data/mbito/models/', model_path))
+                torch.save(model.state_dict(), os.path.join('./saved_models/', model_path))
             else: 
                 stop_counter+=1
 
@@ -136,8 +135,7 @@ if __name__ == '__main__':
             optimizer.step()
 
         # load the best model for evaluation
-        # best_model = torch.load(os.path.join('/data/mbito/models/', model_path))
-        model.load_state_dict(torch.load(os.path.join('/data/mbito/models/', model_path), weights_only=True))
+        model.load_state_dict(torch.load(os.path.join('./saved_models/', model_path), weights_only=True))
         model.eval()
         if model_name in ['MLP_LLPE', 'GCN_LLPE', 'SAGE_LLPE', 'GT_LLPE', 'FAGCN_LLPE', 'GCN2_LLPE']: 
             pred = model(data, device)[0]
