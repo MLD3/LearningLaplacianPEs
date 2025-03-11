@@ -13,6 +13,7 @@ import torch.nn.functional as F
 
 class GraphTransformer_LLPE(nn.Module):
     '''
+    GT with Learnable Laplacian Position Encodings
     '''
     def __init__(self, in_dim, pos_dim=8, h_dim=32, out_dim=1, K=64, num_layers=2, num_heads=4, dropout=0, layer_norm_eps=0):
         super(GraphTransformer_LLPE, self).__init__()
